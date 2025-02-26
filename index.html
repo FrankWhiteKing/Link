@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Project</title>
+
+    <link rel="stylesheet" href="video-container.css">  <!-- CSS-Datei jetzt korrekt verlinkt -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(253, 253, 253);
+            font-family: "Oswald", serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+        }
+        .logo {
+            color: orange;
+            font-size: 24px;
+        }
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 30px;
+        }
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80vh;
+            padding: 0 10%;
+        }
+        .content {
+            max-width: 500px;
+        }
+        .content h2 {
+            font-size: 60px;
+        }
+        .content span {
+            font-weight: bold;
+        }
+        .content p {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        .button {
+            background-color: orange;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #ff9800;
+            opacity: 0.8;
+        }
+        .image-container img {
+            width: 500px;
+            border-radius: 10px;
+            opacity: 0.5;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 1024px) {
+            main {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+            }
+            .image-container {
+                margin-top: 20px;
+            }
+        }
+        nav a:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">HTML-PROJEKT</h1>
+        <nav>
+            <ul>
+                <li><a href="Plakate.html">Projekte</a></li>
+                <li><a href="https://www.linkedin.com/in/leonardo-stevanovic-77a979350/">LinkedIn</a></li>
+                <li><a href="https://www.joblinge.de/">Joblinge</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="content">
+            <h2>Leonardo <br><span>Stevanovic</span></h2>
+            <p>Ich habe meinen Mittleren Schulabschluss am Oberstufenzentrum Kommunikations-, Informations- und Medientechnik (OSZ KIM) gemacht. Dort habe ich festgestellt, dass ich Elektrotechnik sehr spannend finde...</p>
+            <a href="Lebenslauf-Mockup.html" class="button">Lebenslauf</a>
+        </section>
+
+        <div class="image-container">
+            <img src="Ich-ohne-titel.png" alt="Bild von Leonardo Stevanovic">
+        </div>
+    </main>
+
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="Gruencyber.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>
